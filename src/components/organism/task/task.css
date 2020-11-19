@@ -1,0 +1,22 @@
+.taskWrap{
+    border: solid 1px black;
+    border-radius: 10px;
+    margin: 5px;
+    background: bisque;
+
+}
+.taskWrap p{
+    margin: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+img{
+    width: 155px;
+    border-radius: 50%;
+}
+.propRed{
+    background-color: red;
+    padding: 1px;
+    border-radius: 5px;
+    color:white
+}

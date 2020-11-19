@@ -1,0 +1,12 @@
+.dropMenu{
+    display: inline-grid;
+}
+.dropMenu select{
+    cursor: pointer;
+}
+.error{
+    color: red;
+    padding: 0px;
+    margin: 0px;
+    font-weight: 500;
+}
