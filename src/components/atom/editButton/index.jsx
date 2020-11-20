@@ -1,15 +1,17 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const EditButton = ({ value, deleteItem }) => {
-    return (
-        <button onClick={deleteItem}>{value}</button>
-    )
-}
+  return (
+    <button type="submit" onClick={deleteItem}>
+      {value}
+    </button>
+  );
+};
 
-EditButton.propTypes={
-    value: PropTypes.string,
-    deleteItem: PropTypes.func.isRequired
-}
+EditButton.propTypes = {
+  value: PropTypes.string.isRequired,
+  deleteItem: PropTypes.func.isRequired,
+};
 
-export default EditButton
+export default EditButton;

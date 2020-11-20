@@ -1,11 +1,7 @@
-import React from "react"
+import React from 'react';
 
 const AvatarImage = () => {
-    return (
-        <img />
-    )
-}
+  return <img alt="" />;
+};
 
-
-
-export default AvatarImage
+export default AvatarImage;

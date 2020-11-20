@@ -1,4 +1,5 @@
-import ACTIONS from "../../constans/ACTIONS";
+import ACTIONS from '../../constans/ACTIONS';
+
 const addUserToList = (newUser) => {
   return {
     type: ACTIONS.ADD_USER_TO_LIST,
@@ -8,7 +9,7 @@ const addUserToList = (newUser) => {
 const deleteUser = (id) => {
   return {
     type: ACTIONS.DELETE_USER,
-    index: id
-  }
-}
+    index: id,
+  };
+};
 export { addUserToList, deleteUser };

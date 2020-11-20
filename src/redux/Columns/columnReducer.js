@@ -1,74 +1,61 @@
-import ACTIONS from "../../constans/ACTIONS.js";
+import ACTIONS from '../../constans/ACTIONS';
+
 const initialState = {
-    allListColumns: [{
-        name: "To Do",
-        createdAt: "date",
-        itemCount: "",
-        value: 0
-    }, {
-        name: "In Progress",
-        createdAt: "date",
-        itemCount: "",
-        value: 1
-    }, {
-        name: "On Hold",
-        createdAt: "date",
-        itemCount: "",
-        value: 2
-    }, {
-        name: "Done",
-        createdAt: "date",
-        itemCount: "",
-        value: 3
-    }
-    ],
+  allListColumns: [
+    {
+      name: 'To Do',
+      createdAt: 'date',
+      itemCount: '',
+      value: 0,
+    },
+    {
+      name: 'In Progress',
+      createdAt: 'date',
+      itemCount: '',
+      value: 1,
+    },
+    {
+      name: 'On Hold',
+      createdAt: 'date',
+      itemCount: '',
+      value: 2,
+    },
+    {
+      name: 'Done',
+      createdAt: 'date',
+      itemCount: '',
+      value: 3,
+    },
+  ],
 };
 export default function listColumnReducer(state = initialState, action) {
-    switch (action.type) {
-        case ACTIONS.ADD_LISTCOLUMN:
-            return {
-                ...state,
-                allListColumns: [
-                    ...state.allListColumns,
-                    {
-                        name: action.listColumn.name,
-                        value: state.allListColumns.length,
-                    },
-                ],
-            };
+  const { index } = action;
+  const newArr = [...state.allListColumns];
+  newArr.splice(index, 1);
 
-        case ACTIONS.DELETE_COLUMN:
-            const index = action.index;
-            const newArr = [...state.allListColumns];
-            newArr.splice(index, 1);
-            const newArray = newArr.map((elem, i) => {
-                if (i >= index) {
-                    return {
-                        ...elem,
-                        value: elem.value - 1,
-                    };
-                }
-                return elem;
-            });
-            return {
-                ...state,
-                allListColumns: newArray,
-            };
+  switch (action.type) {
+    case ACTIONS.ADD_LISTCOLUMN:
+      return {
+        ...state,
+        allListColumns: [
+          ...state.allListColumns,
+          {
+            name: action.listColumn.name,
+            value: state.allListColumns.length,
+          },
+        ],
+      };
 
-        default:
-            return state;
-    }
+    case ACTIONS.DELETE_COLUMN:
+      return {
+        ...state,
+        allListColumns: newArr.map((elem, i) => ({
+          ...elem,
+          value: i >= index ? elem.value - 1 : elem.value,
+        })),
+      };
+
+    default:
+      return state;
+  }
 }
-
-// { ...action.issue, id: state.allIssues.length }
-
-// return {
-//     ...state,
-//     allListColumns: [
-//       ...state.allListColumns,
-//       {
-//         name: action.listColumn.title,
-//         value: action.listColumn.value,
-//       },
-//     ],
-//   };

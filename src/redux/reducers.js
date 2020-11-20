@@ -1,7 +1,7 @@
-import { combineReducers } from "redux";
-import issueReducer from "./Issues/issueReducer";
-import userReducer from "./Users/userReducer";
-import listColumnReducer from "./Columns/columnReducer";
+import { combineReducers } from 'redux';
+import issueReducer from './Issues/issueReducer';
+import userReducer from './Users/userReducer';
+import listColumnReducer from './Columns/columnReducer';
 
 export default combineReducers({
   issues: issueReducer,

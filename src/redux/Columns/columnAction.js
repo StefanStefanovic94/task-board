@@ -1,4 +1,5 @@
-import ACTIONS from "../../constans/ACTIONS.js";
+import ACTIONS from '../../constans/ACTIONS';
+
 const addColumn = (newListColumn) => {
   return {
     type: ACTIONS.ADD_LISTCOLUMN,
@@ -9,8 +10,8 @@ const addColumn = (newListColumn) => {
 const deleteColumn = (id) => {
   return {
     type: ACTIONS.DELETE_COLUMN,
-    index: id
-  }
-}
+    index: id,
+  };
+};
 
 export { addColumn, deleteColumn };
