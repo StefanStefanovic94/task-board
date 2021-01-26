@@ -1,4 +1,4 @@
-Before you start app<a href="https://StefanStefanovic94.github.io/deploy-task-board">here</a>, you can read bellow what you can do.
+Before you start app <a href="https://StefanStefanovic94.github.io/deploy-task-board">here</a>, you can read bellow what you can do.
 
 Application, that was built by atomic design in react framework. 
 
