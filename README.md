@@ -1,6 +1,6 @@
 Before you start app <a href="https://StefanStefanovic94.github.io/deploy-task-board">here</a>, you can read below what app allows you to do.
 
-Application, that was built by atomic design in react framework. 
+Application, that was built by atomic design with redux in react framework. 
 
 The inspiration for this project came from jira, app used to manage the project.
 
