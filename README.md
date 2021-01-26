@@ -1,3 +1,5 @@
+<a href="https://StefanStefanovic94.github.io/deploy-task-board">App Preview</a>
+
 Application, that was built by atomic design in react framework. 
 
 The inspiration for this project came from jira, app used to manage the project.
