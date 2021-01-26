@@ -8,6 +8,7 @@ Create task for users.
 
 Create new user whit avatar(insert image url,here is example url that you can copy and use => 
 https://complianceandethics.org/wp-content/uploads/2014/08/The_Godfather_by_Nanto.jpg 
+
 <=)
 
 Remove some of the users.
