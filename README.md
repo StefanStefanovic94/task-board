@@ -8,6 +8,7 @@ Create task for users.
 
 Create new user whit avatar(insert image url,here is example url that you can copy and use => 
 https://image.freepik.com/free-vector/head-man_1308-33466.jpg 
+
 <=)
 
 Remove some of the users.
